@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "C:\\monthproj\\ijkplayer\\ijkplayer-example\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\software\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\monthproj\\ijkplayer\\ijkplayer-example\\.externalNativeBuild\\cmake\\all64Release\\armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "ijkplayer-Release-armeabi-v7a": {
+      "artifactName": "ijkplayer",
+      "buildCommand": "C:\\software\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\monthproj\\ijkplayer\\ijkplayer-example\\.externalNativeBuild\\cmake\\all64Release\\armeabi-v7a --target ijkplayer",
+      "abi": "armeabi-v7a",
+      "output": "C:\\monthproj\\ijkplayer\\ijkplayer-example\\build\\intermediates\\cmake\\all64\\release\\obj\\armeabi-v7a\\libijkplayer.so"
+    }
+  }
+}

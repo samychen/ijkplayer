@@ -1,0 +1,15 @@
+Executable : C:\software\sdk\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+-HC:\monthproj\ijkplayer\ijkplayer-example
+-BC:\monthproj\ijkplayer\ijkplayer-example\.externalNativeBuild\cmake\all64Debug\armeabi-v7a
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_PLATFORM=android-21
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\monthproj\ijkplayer\ijkplayer-example\build\intermediates\cmake\all64\debug\obj\armeabi-v7a
+-DCMAKE_BUILD_TYPE=Debug
+-DANDROID_NDK=C:\software\android-ndk-r17c
+-DCMAKE_CXX_FLAGS=-frtti -fexceptions -std=gnu++11 -std=c++98  -DWEBRTC_POSIX -DNMDEBUG -D__STDC_CONSTANT_MACROS -DUSR_DEF_ENABLE_CONVERTER=1 -DUSR_CODEC_DEBUG=0 -DTESR_RUNTIME_COST=0
+-DCMAKE_TOOLCHAIN_FILE=C:\software\android-ndk-r17c\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\software\sdk\cmake\3.6.4111459\bin\ninja.exe
+-GAndroid Gradle - Ninja
+jvmArgs : 
+

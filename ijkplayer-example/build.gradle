@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+android {
+    // http://tools.android.com/tech-docs/new-build-system/tips
+    //noinspection GroovyAssignabilityCheck
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    //noinspection GroovyAssignabilityCheck
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    defaultConfig {
+        applicationId "tv.danmaku.ijk.media.example"
+        minSdkVersion 9
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions -std=gnu++11 -std=c++98  -DWEBRTC_POSIX -DNMDEBUG" +
+                        " -D__STDC_CONSTANT_MACROS -DUSR_DEF_ENABLE_CONVERTER=1" +
+                        " -DUSR_CODEC_DEBUG=0" +
+                        " -DTESR_RUNTIME_COST=0"
+            }
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "default"//这个名字貌似随便取，也可以有多个，总之一定要有..
+//    productFlavors {
+//        market {
+//            dimension "default"
+//        }
+//    }
+    productFlavors {
+        all32 { minSdkVersion 9 }
+        all64 { minSdkVersion 21 }
+        // armv5 {}
+        // armv7a {}
+        // arm64 { minSdkVersion 21 }
+        // x86 {}
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:23.0.1'
+    implementation 'com.android.support:preference-v7:23.0.1'
+    implementation 'com.android.support:support-annotations:23.0.1'
+
+    implementation 'com.squareup:otto:1.3.8'
+
+    implementation project(':ijkplayer-java')
+    implementation project(':ijkplayer-exo')
+
+    implementation project(':ijkplayer-armv7a')
+
+
+    // compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
+    // compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.4'
+
+    // all32Compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.4'
+    // all32Compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+    // all32Compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
+
+    // all64Compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.4'
+    // all64Compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+    // all64Compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.4'
+    // all64Compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
+    // all64Compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.4'
+
+    // armv5Compile project(':player-armv5')
+    // armv7aCompile project(':player-armv7a')
+    // arm64Compile project(':player-arm64')
+    // x86Compile project(':player-x86')
+    // x86_64Compile project(':player-x86_64')
+}

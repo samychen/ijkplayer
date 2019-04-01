@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":ijkplayer-example" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":ijkplayer-example" />
+      </configuration>
+    </facet>
+    <facet type="native-android-gradle" name="Native-Android-Gradle">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="all32Debug-armeabi-v7a" />
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="all32Debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleAll32Debug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileAll32DebugSources" />
+        <afterSyncTasks>
+          <task>generateAll32DebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/build/intermediates/javac/all32Debug/compileAll32DebugJavaWithJavac/classes" />
+    <output-test url="file://$MODULE_DIR$/build/intermediates/javac/all32DebugUnitTest/compileAll32DebugUnitTestJavaWithJavac/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/android-ndk-prof">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/android-ndk-prof" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/android/media">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/android/media" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/android/os">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/android/os" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/java/nio">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/java/nio" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/java/util">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/java/util" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/tv/danmaku/ijk/media/player">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/tv/danmaku/ijk/media/player" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/tv/danmaku/ijk/media/player/misc">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4a/class/tv/danmaku/ijk/media/player/misc" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4au/class/android/media">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4au/class/android/media" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4au/class/java/nio">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkj4a/j4au/class/java/nio" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/android">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/android" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/android/pipeline">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/android/pipeline" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/ijkavformat">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/ijkavformat" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/ijkavutil">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/ijkavutil" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/pipeline">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkplayer/pipeline" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/android">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/android" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/dummy">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/dummy" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/ffmpeg">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/ffmpeg" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/ffmpeg/abi_all">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/ffmpeg/abi_all" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/gles2">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/gles2" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/gles2/fsh">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/gles2/fsh" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/gles2/vsh">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksdl/gles2/vsh" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksoundtouch">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksoundtouch" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksoundtouch/source/Android-lib/jni">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksoundtouch/source/Android-lib/jni" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksoundtouch/source/SoundStretch">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksoundtouch/source/SoundStretch" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksoundtouch/source/SoundTouch">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijksoundtouch/source/SoundTouch" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkyuv/source">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkyuv/source" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkyuv/util">
+      <sourceFolder url="file://$MODULE_DIR$/../ijkplayer-armv7a/src/main/jni/ijkmedia/ijkyuv/util" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/all32/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/all32Debug/compileAll32DebugAidl/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/all32/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/all32Debug/compileAll32DebugRenderscript/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/all32/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/all32/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/jni" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/all32/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/all32DebugAndroidTest/compileAll32DebugAndroidTestAidl/out" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/all32/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/all32DebugAndroidTest/compileAll32DebugAndroidTestRenderscript/out" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/all32/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/all32/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32Debug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32Debug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32Debug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32Debug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32Debug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32Debug/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32Debug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32Debug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/test/all32/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32/jni" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/all32/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAll32/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/jni" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/jni" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.externalNativeBuild" />
+      <excludeFolder url="file://$MODULE_DIR$/build/generated/not_namespaced_r_class_sources" />
+      <excludeFolder url="file://$MODULE_DIR$/build/generated/source/r" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotation_processor_list" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/apk_list" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundle_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check_manifest_result" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/cmake" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/compatible_screen_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/external_libs_dex" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_app_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_merged_manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javac" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_assets" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/metadata_feature_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/processed_res" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shader_assets" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/signing_config" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
+      <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: com.squareup:otto:1.3.8@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7:23.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:preference-v7:23.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-v4:23.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:recyclerview-v7:23.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:23.0.1@jar" level="project" />
+    <orderEntry type="module" module-name="ijkplayer-java" />
+    <orderEntry type="module" module-name="ijkplayer-exo" />
+    <orderEntry type="module" module-name="ijkplayer-armv7a" />
+  </component>
+</module>

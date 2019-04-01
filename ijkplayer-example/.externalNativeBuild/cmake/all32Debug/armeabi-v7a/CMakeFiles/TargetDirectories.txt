@@ -1,0 +1,3 @@
+C:/monthproj/ijkplayer/ijkplayer-example/.externalNativeBuild/cmake/all32Debug/armeabi-v7a/CMakeFiles/ijkplayer.dir
+C:/monthproj/ijkplayer/ijkplayer-example/.externalNativeBuild/cmake/all32Debug/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/monthproj/ijkplayer/ijkplayer-example/.externalNativeBuild/cmake/all32Debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
