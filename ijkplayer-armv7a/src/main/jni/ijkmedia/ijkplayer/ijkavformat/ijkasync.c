@@ -189,7 +189,7 @@ static void call_inject_statistic(URLContext *h)
         AVAppAsyncStatistic statistic = {0};
         statistic.size = sizeof(statistic);
         statistic.buf_forwards  = ring_size(&c->ring);
-        statistic.buf_backwards = ring_size_of_read_back(&c->ring);
+        statistic.buf_backwards = ring_size_of_read_back(&c->ring);//buf_forwards+buf_backwards = av_fifo_size(ring->fifo)
         statistic.buf_capacity  = c->forwards_capacity + c->backwards_capacity;
         av_application_on_async_statistic(c->app_ctx, &statistic);
     }

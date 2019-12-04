@@ -177,8 +177,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=C:/software/android-ndk-r17c/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-strip.exe
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/software/android-ndk-r17c/build/cmake/android.toolchain.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:\software\android-ndk-r17c\build\cmake\android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -211,7 +211,7 @@ android-lib:FILEPATH=C:/software/android-ndk-r17c/platforms/android-21/arch-arm/
 dl-lib:FILEPATH=C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libdl.so
 
 //Dependencies for the target
-ijkplayer_LIB_DEPENDS:STATIC=general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/liblog.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libandroid.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libEGL.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libGLESv2.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libGLESv1_CM.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libOpenSLES.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libdl.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libz.so;general;C:/monthproj/ijkplayer/ijkplayer-example/../../contrib/build/ffmpeg-armv7a/output/libijkffmpeg.so;
+ijkplayer_LIB_DEPENDS:STATIC=general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/liblog.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libandroid.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libEGL.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libGLESv2.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libGLESv1_CM.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libOpenSLES.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libdl.so;general;C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/libz.so;general;C:/monthproj/ijkplayer/ijkplayer-example/../ijkplayer-armv7a/src/main/libs/armeabi-v7a/libijkffmpeg.so;
 
 //Path to a library.
 log-lib:FILEPATH=C:/software/android-ndk-r17c/platforms/android-21/arch-arm/usr/lib/liblog.so

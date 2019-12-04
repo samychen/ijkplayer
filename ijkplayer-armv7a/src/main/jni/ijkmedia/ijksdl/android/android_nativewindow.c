@@ -233,7 +233,7 @@ int SDL_Android_NativeWindow_display_l(ANativeWindow *native_window, SDL_VoutOve
         ALOGD("ANativeWindow_setBuffersGeometry: w=%d, h=%d, f=%.4s(0x%x) => w=%d, h=%d, f=%.4s(0x%x)",
             curr_w, curr_h, (char*) &curr_format, curr_format,
             buff_w, buff_h, (char*) &overlay->format, overlay->format);
-        retval = ANativeWindow_setBuffersGeometry(native_window, buff_w, buff_h, overlayDesc->hal_format);
+        retval = ANativeWindow_setBuffersGeometry(native_window, buff_w, buff_h, overlayDesc->hal_format);//w=720, h=1280, f=(0x4) => w=720, h=1280, f=RV32(0x32335652)
         if (retval < 0) {
             ALOGE("SDL_Android_NativeWindow_display_l: ANativeWindow_setBuffersGeometry: failed %d", retval);
             return retval;

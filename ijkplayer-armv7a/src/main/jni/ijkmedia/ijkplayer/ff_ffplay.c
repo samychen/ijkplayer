@@ -578,6 +578,8 @@ static int decoder_decode_frame(FFPlayer *ffp, Decoder *d, AVFrame *frame, AVSub
                     case AVMEDIA_TYPE_VIDEO:
                         ret = avcodec_receive_frame(d->avctx, frame);
                         if (ret >= 0) {
+                            //可以在这里做yuv图像处理
+//                            yuv::I420Rotate()
                             ffp->stat.vdps = SDL_SpeedSamplerAdd(&ffp->vdps_sampler, FFP_SHOW_VDPS_AVCODEC, "vdps[avcodec]");
                             if (ffp->decoder_reorder_pts == -1) {
                                 frame->pts = frame->best_effort_timestamp;
@@ -718,6 +720,7 @@ static Frame *frame_queue_peek_next(FrameQueue *f)
     return &f->queue[(f->rindex + f->rindex_shown + 1) % f->max_size];
 }
 
+//从pictq中读取当前需要显示视频帧
 static Frame *frame_queue_peek_last(FrameQueue *f)
 {
     return &f->queue[f->rindex];
@@ -1252,7 +1255,7 @@ static double compute_target_delay(FFPlayer *ffp, double delay, VideoState *is)
     double sync_threshold, diff = 0;
 
     /* update delay to follow master synchronisation source */
-    if (get_master_sync_type(is) != AV_SYNC_VIDEO_MASTER) {
+    if (get_master_sync_type(is) != AV_SYNC_VIDEO_MASTER) {//如果发现当前主时钟源不是video，则计算当前视频时钟与主时钟的差值：
         /* if video is slave, we try to correct big delays by
            duplicating or deleting a frame */
         diff = get_clock(&is->vidclk) - get_master_clock(is);
@@ -1263,11 +1266,11 @@ static double compute_target_delay(FFPlayer *ffp, double delay, VideoState *is)
         sync_threshold = FFMAX(AV_SYNC_THRESHOLD_MIN, FFMIN(AV_SYNC_THRESHOLD_MAX, delay));
         /* -- by bbcallen: replace is->max_frame_duration with AV_NOSYNC_THRESHOLD */
         if (!isnan(diff) && fabs(diff) < AV_NOSYNC_THRESHOLD) {
-            if (diff <= -sync_threshold)
+            if (diff <= -sync_threshold)//如果当前视频帧落后于主时钟源，则需要减小下一帧画面的等待时间；
                 delay = FFMAX(0, delay + diff);
-            else if (diff >= sync_threshold && delay > AV_SYNC_FRAMEDUP_THRESHOLD)
+            else if (diff >= sync_threshold && delay > AV_SYNC_FRAMEDUP_THRESHOLD)//如果视频帧超前，并且该帧的显示时间大于显示更新门槛，则显示下一帧的时间为超前的时间差加上上一帧的显示时间
                 delay = delay + diff;
-            else if (diff >= sync_threshold)
+            else if (diff >= sync_threshold)//如果视频帧超前，并且上一帧的显示时间小于显示更新门槛，则采取加倍延时的策略。
                 delay = 2 * delay;
         }
     }
@@ -1283,17 +1286,21 @@ static double compute_target_delay(FFPlayer *ffp, double delay, VideoState *is)
 
     return delay;
 }
-
-static double vp_duration(VideoState *is, Frame *vp, Frame *nextvp) {
-    if (vp->serial == nextvp->serial) {
-        double duration = nextvp->pts - vp->pts;
-        if (isnan(duration) || duration <= 0 || duration > is->max_frame_duration)
-            return vp->duration;
-        else
-            return duration;
-    } else {
-        return 0.0;
-    }
+//根据当前帧和上一帧的pts，计算出来上一帧的显示时间
+//static double vp_duration(VideoState *is, Frame *vp, Frame *nextvp) {
+//    if (vp->serial == nextvp->serial) {
+//        double duration = nextvp->pts - vp->pts;
+//        if (isnan(duration) || duration <= 0 || duration > is->max_frame_duration)
+//            return vp->duration;
+//        else
+//            return duration;
+//    } else {
+//        return 0.0;
+//    }
+//}
+//降低延迟
+static double vp_duration(VideoState*is,Frame*vp,Frame*nextvp) {
+    return vp->duration;
 }
 
 static void update_video_pts(VideoState *is, double pts, int64_t pos, int serial) {
@@ -1332,8 +1339,8 @@ retry:
             Frame *vp, *lastvp;
 
             /* dequeue the picture */
-            lastvp = frame_queue_peek_last(&is->pictq);
-            vp = frame_queue_peek(&is->pictq);
+            lastvp = frame_queue_peek_last(&is->pictq);//上一帧
+            vp = frame_queue_peek(&is->pictq);//当前帧
 
             if (vp->serial != is->videoq.serial) {
                 frame_queue_next(&is->pictq);
@@ -1347,20 +1354,20 @@ retry:
                 goto display;
 
             /* compute nominal last_duration */
-            last_duration = vp_duration(is, lastvp, vp);
+            last_duration = vp_duration(is, lastvp, vp);//last_duration则是根据当前帧和上一帧的pts，计算出来上一帧的显示时间，经过compute_target_delay方法，计算出显示当前帧需要等待的时间。
             delay = compute_target_delay(ffp, last_duration, is);
 
             time= av_gettime_relative()/1000000.0;
             if (isnan(is->frame_timer) || time < is->frame_timer)
-                is->frame_timer = time;
+                is->frame_timer = time;//frame_timer实际上就是上一帧的播放时间，而frame_timer  + delay实际上就是当前这一帧的播放时间，如果系统时间还没有到当前这一帧的播放时间，直接跳转至display，而此时is->force_refresh变量为0，不显示当前帧，进入video_refresh_thread中下一次循环，并睡眠等待。
             if (time < is->frame_timer + delay) {
                 *remaining_time = FFMIN(is->frame_timer + delay - time, *remaining_time);
                 goto display;
             }
 
             is->frame_timer += delay;
-            if (delay > 0 && time - is->frame_timer > AV_SYNC_THRESHOLD_MAX)
-                is->frame_timer = time;
+            if (delay > 0 && time - is->frame_timer > AV_SYNC_THRESHOLD_MAX)//如果当前这一帧的播放时间已经过了，并且其和当前系统时间的差值超过了AV_SYNC_THRESHOLD_MAX
+                is->frame_timer = time;// 则将当前这一帧的播放时间改为系统时间，并在后续判断是否需要丢帧，其目的是为后面帧的播放时间重新调整frame_timer，如果缓冲区中有更多的数据，并且当前的时间已经大于当前帧的持续显示时间，则丢弃当前帧，尝试显示下一帧。
 
             SDL_LockMutex(is->pictq.mutex);
             if (!isnan(vp->pts))
@@ -1413,7 +1420,7 @@ retry:
 display:
         /* display picture */
         if (!ffp->display_disable && is->force_refresh && is->show_mode == SHOW_MODE_VIDEO && is->pictq.rindex_shown)
-            video_display2(ffp);
+            video_display2(ffp);//进入正常显示当前帧的流程，调用video_display2开始渲染。
     }
     is->force_refresh = 0;
     if (ffp->show_status) {
@@ -2315,7 +2322,8 @@ static int ffplay_video_thread(void *arg)
                 is->frame_last_filter_delay = 0;
             tb = av_buffersink_get_time_base(filt_out);
 #endif
-            duration = (frame_rate.num && frame_rate.den ? av_q2d((AVRational){frame_rate.den, frame_rate.num}) : 0);
+//            duration = (frame_rate.num && frame_rate.den ? av_q2d((AVRational){frame_rate.den, frame_rate.num}) : 0);
+            duration = 0.01;//降低延时
             pts = (frame->pts == AV_NOPTS_VALUE) ? NAN : frame->pts * av_q2d(tb);
             ret = queue_picture(ffp, frame, pts, duration, frame->pkt_pos, is->viddec.pkt_serial);
             av_frame_unref(frame);
@@ -2952,7 +2960,7 @@ static int stream_component_open(FFPlayer *ffp, int stream_index)
             }
             if (ffp->node_vdec) {
                 is->viddec.avctx = avctx;
-                ret = ffpipeline_config_video_decoder(ffp->pipeline, ffp);
+                ret = ffpipeline_config_video_decoder(ffp->pipeline, ffp);//开始配置mediacodec
             }
             if (ret || !ffp->node_vdec) {
                 decoder_init(&is->viddec, avctx, &is->videoq, is->continue_read_thread);
@@ -3755,6 +3763,7 @@ fail:
 // FFP_MERGE: options
 // FFP_MERGE: show_usage
 // FFP_MERGE: show_help_default
+
 static int video_refresh_thread(void *arg)
 {
     FFPlayer *ffp = arg;
@@ -3762,10 +3771,10 @@ static int video_refresh_thread(void *arg)
     double remaining_time = 0.0;
     while (!is->abort_request) {
         if (remaining_time > 0.0)
-            av_usleep((int)(int64_t)(remaining_time * 1000000.0));
+            av_usleep((int)(int64_t)(remaining_time * 1000000.0));//1.休眠等待，remaining_time的计算在video_refresh中
         remaining_time = REFRESH_RATE;
         if (is->show_mode != SHOW_MODE_NONE && (!is->paused || is->force_refresh))
-            video_refresh(ffp, &remaining_time);
+            video_refresh(ffp, &remaining_time);//2.调用video_refresh方法，刷新视频帧
     }
 
     return 0;

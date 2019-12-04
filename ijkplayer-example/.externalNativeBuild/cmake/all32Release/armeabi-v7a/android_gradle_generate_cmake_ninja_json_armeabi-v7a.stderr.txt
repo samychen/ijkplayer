@@ -1,0 +1,10 @@
+CMake Error at CMakeLists.txt:202 (add_library):
+  Cannot find source file:
+
+    C:/monthproj/ijkplayer/ijkplayer-armv7a/src/main/jni/ijkmedia/ijksoundtouch/ijksoundtouch_wrap.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+CMake Error: CMake can not determine linker language for target: ijkplayer
